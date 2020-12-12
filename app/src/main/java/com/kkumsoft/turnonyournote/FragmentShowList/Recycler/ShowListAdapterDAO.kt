@@ -24,6 +24,19 @@ class ShowListAdapterDAO {
         return db.rawQuery(qry,null)
     }
 
+    fun getLastIndex() : Int{
+        helper = DBOpenHelper(context)
+        db = helper.readableDatabase
+
+        val qry = "SELECT showID FROM showingTbl ORDER BY showID desc"
+
+        val cursor :Cursor = db.rawQuery(qry,null)
+
+        cursor.moveToFirst()
+
+        return cursor.getInt(0)
+    }
+
     fun insertShowing(showID : Int, wordID : Int){
         helper = DBOpenHelper(context)
         db = helper.writableDatabase

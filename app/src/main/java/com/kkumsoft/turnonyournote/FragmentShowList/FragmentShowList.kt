@@ -92,6 +92,11 @@ class FragmentShowList(activity: MainActivity) : Fragment() ,ItemDragListener{
 
     }
 
+    fun insertSimpleShow(word : String){
+
+       // showListAdapter.addItem()
+    }
+
     override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
         itemTouchHelper.startDrag(viewHolder)
     }

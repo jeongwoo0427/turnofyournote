@@ -131,15 +131,17 @@ class MainActivity : AppCompatActivity() {
         var animDuration : Long = 300
         if(isEditing){
 
-            activitymain_bottomnav.animate().translationY(500f).setDuration(animDuration)
-            activitymain_bottom_rl1.animate().translationY(500f).setDuration(animDuration).setListener(object:AnimatorListenerAdapter(){
-                override fun onAnimationEnd(animation: Animator?) {
-                    super.onAnimationEnd(animation)
-                }
-        })
-            activitymain_bottom_rl2.animate().translationY(0f).setDuration(animDuration)
 
-        //   fragmentShowList.ibtnMore.animate().translationX(100f).setDuration(animDuration)
+            if(this.isEditing == false) {
+                activitymain_bottomnav.animate().translationY(500f).setDuration(animDuration)
+                activitymain_bottom_rl1.animate().translationY(500f).setDuration(animDuration)
+                    .setListener(object : AnimatorListenerAdapter() {
+                        override fun onAnimationEnd(animation: Animator?) {
+                            super.onAnimationEnd(animation)
+                        }
+                    })
+                activitymain_bottom_rl2.animate().translationY(0f).setDuration(animDuration)
+            }
 
 
         }else{

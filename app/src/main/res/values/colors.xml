@@ -9,6 +9,7 @@
     <color name="colorLowLowBackLight">#EEEEEE</color>
 
     <color name="colorTextDark">#141414</color>
+    <color name="colorTextGray">#414141</color>
 
 
 </resources>
