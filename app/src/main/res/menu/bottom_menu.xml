@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/showlist"
+        android:title="표시단어"
+        android:icon="@drawable/ic_action_showlist"
+        />
+
+    <item
+        android:id="@+id/alllist"
+        android:title="단어장"
+        android:icon="@drawable/ic_action_alllist"
+        />
+
+    <item
+        android:id="@+id/setting"
+        android:title="설정"
+        android:icon="@drawable/ic_action_setting"
+        />
+
+</menu>
